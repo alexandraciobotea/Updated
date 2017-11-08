@@ -3,48 +3,52 @@
 <body>
 <body style="background-image:url(rainbow_smiley_faces_on_white_background_seamless.jpg)">
 <fieldset>
-<form action="/action_page.php">
+<FORM METHOD="POST" ACTION="Recenzii.php">
   <legend>Sperăm că ați avut o experiență plăcută! Vă invităm să completați acest chestionar pentru a ne ajuta să îmbunătățim acest site!
   </legend>
   <br>
-  <br>Nume:<br>
-  <input type="text" name="lastname"><br>
+  <form method="post" action="carla.olaru96@gmail.com">
   <br>Prenume:<br>
-  <input type="text" name="firstname">
+  <input type="text" name="first_name">
+    <br>Nume:<br>
+  <input type="text" name="last_name"><br>
+  <br>E-mail:<br>
+  <input type="text" name="email">
   <br>
   <form>
   <br>
   <legend>Sexul:
   </legend>
   <br>
-  <input type="radio" name="sex" value="Feminin">Feminin<br>
-  <input type="radio" name="sex" value="Masculin">Masculin<br>
+  <input type="checkbox" name="sex" value="Feminin">Feminin<br>
+  <input type="checkbox" name="sex" value="Masculin">Masculin<br>
   <br>
   <legend>Vârsta:
   </legend>
   <br>
-  <input type="radio" name="varsta" value="15-25">15-25<br>
-  <input type="radio" name="varsta" value="25-35">25-35<br>
-  <input type="radio" name="varsta" value="35-45">35-45<br>
-  <input type="radio" name="varsta" value="Alta varsta">Altă vârstă<br>
+  <input type="checkbox" name="varsta" value="15-25">15-25<br>
+  <input type="checkbox" name="varsta" value="25-35">25-35<br>
+  <input type="checkbox" name="varsta" value="35-45">35-45<br>
+  <input type="checkbox" name="varsta" value="Alta varsta">Altă vârstă<br>
   <br><legend>A fost util acest site ?
   </legend>
   <br>
-  <input type="radio" name="raspuns" value="Da">DA<br>
-  <input type="radio" name="raspuns" value="Nu">NU<br>
+  <input type="checkbox" name="raspuns" value="DA">DA<br>
+  <input type="checkbox" name="raspuns" value="NU">NU<br>
   <br><legend>V-au plăcut rețetele noastre ?
   </legend>
   <br>
-  <input type="radio" name="raspuns" value="Da">DA<br>
-  <input type="radio" name="raspuns" value="Nu">NU<br>
-  <input type="radio" name="raspuns" value="Altele">Altele<br>
+  <input type="checkbox" name="raspuns2" value="Da">Da<br>
+  <input type="checkbox" name="raspuns2" value="Nu">Nu<br>
+  <input type="checkbox" name="raspuns2" value="Altele">Altele<br>
   <br><legend>Sugestii pentru îmbunătățiri :
   </legend>
   <br>
-  <textarea name="comment" form="usrform"></textarea>
+  <textarea name="comments" form="usrform"></textarea>
 </form>
 <br>
 <input type="submit" value="Trimite">
+<form method="post" action="mailto:carla.olaru96@gmail.com">
 </fieldset>
 </form> 
 </body>
