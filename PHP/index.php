@@ -9,13 +9,28 @@
 <body>  
 <div id="main">
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //something posted
+
+    if (isset($_POST['logout'])) {
+        session_destroy();
+        session_unset();
+        unset($_SESSION["loggedin"]);
+        $_SESSION = array();
+        header("Location: index.php");
+        echo "asd";
+    } else {
+        //assume btnSubmit
+        echo "loginstill";
+    }
+}
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 {
      ?>
  
      <h1>Member Area</h1>
      <pThanks for logging in! You are <code><?=$_SESSION['Username']?></code> and your email address is <code><?=$_SESSION['EmailAddress']?></code>.</p>
-      
+     <form action="index.php" method="post"><input type="submit" value="Log out" name="logout"/> </form>
      <?php
 }
 elseif(!empty($_POST['username']) && !empty($_POST['password']))
@@ -50,8 +65,7 @@ else
      
    <h1>Member Login</h1>
      
-   <p>Thanks for visiting! Please either login below, or <a href="register.php">click here to register</a>.</p>
-     
+  
     <form method="post" action="index.php" name="loginform" id="loginform">
     <fieldset>
         <label for="username">Username:</label><input type="text" name="username" id="username" /><br />

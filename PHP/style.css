@@ -12,7 +12,8 @@ a:hover, a:active, a:visited {
     text-decoration: none;
 }
 #main {
-    width: 780px;
+    width: 500px;
+    height: 250px;
     margin: 0 auto;
     margin-top: 50px;
     padding: 10px;

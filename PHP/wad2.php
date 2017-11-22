@@ -17,22 +17,107 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-bar-item w3-button">Acasa</a>
   <a href="supeciorbe.html" onclick="w3_close()" class="w3-bar-item w3-button">Supe si ciorbe</a>
-  <a href="#mancaruri.html" onclick="w3_close()" class="w3-bar-item w3-button">Mancaruri</a>
-   <a href="#pestesifructemare.html" onclick="w3_close()" class="w3-bar-item w3-button">Peste si fructe de mare</a>
+  <a href="#peste.html" onclick="w3_close()" class="w3-bar-item w3-button">Peste</a>
+  <a href="#fructe_mare.html" onclick="w3_close()" class="w3-bar-item w3-button">Fructe de mare</a>
   <a href="#dulciuri.html" onclick="w3_close()" class="w3-bar-item w3-button">Dulciuri</a>
   <a href="#recenzii.html" onclick="w3_close()" class="w3-bar-item w3-button">Recenzii</a>
   <a href="#contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
 </nav>
 
 
+
+<head> 
+<style type="text/css">
+    
+    #buttons{
+      position: relative;
+      top: 0px;
+      right: 0px;
+    }
+    .button { 
+      width: 150px; 
+      padding: 10px; 
+      background-color: #FF8C00; 
+      box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2);
+      font-weight:bold; 
+      text-decoration:none;
+    } 
+    .cover{ 
+      position:fixed; 
+      top:0;
+      left:0; 
+      background:rgba(0,0,0,0.6); 
+      z-index:5; width:100%;
+      height:100%; display:none; 
+    } 
+    #loginScreen,#registerScreen{ 
+      height:250px;
+      width:500px; 
+      margin:auto auto auto 30%; 
+      position:fixed;
+      z-index:10; 
+      display:none; 
+      background-color: #EEE;
+      border:5px solid #cccccc; 
+      border-radius:10px; 
+      overflow: hidden;
+    } 
+
+    #loginScreen:target, #registerScreen:target,
+    #registerScreen:target + .cover,
+    #loginScreen:target + .cover{ 
+      display:block;
+      opacity:2; 
+      overflow: hidden;
+    } 
+    .cancel { 
+      display:block; 
+      position:absolute;
+      top:3px; 
+      right:2px; 
+      background:rgb(245,245,245);
+      color:black; 
+      height:30px; 
+      width:35px; 
+      font-size:30px;
+      text-decoration:none; 
+      text-align:center; 
+      font-weight:bold;
+      
+    } 
+    #loginpannel,#registerpannel {
+      height:180%;
+      width:100%;
+      top:-50px;
+      
+    }
+    .w3-top {
+      position: relative !important;
+    }
+    iframe { overflow:hidden; }
+         </style> </head> <body>
+            
+            
+            <div id="loginScreen"> <a href="#" class="cancel">&times;</a> <iframe id="loginpannel"src="index.php"></iframe></div> <div class="cover" ></div>
+            <div id="registerScreen"> <a href="#" class="cancel">&times;</a> <iframe height="100px" width="100px" scrolling="no" id="registerpannel"src="register.php"></iframe></div> 
+            <div class="cover" ></div> 
+</body>
+
+
 <!-- Top menu -->
 <div class="w3-top">
+  
   <div class="w3-red w3-xlarge" style="max-width:1200px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
     <!--<div class="w3-right w3-padding-16">Contact</div>-->
     <div class="w3-center w3-padding-16">Rețete culinare</div>
   </div>
 </div>
+<div id="buttons"align="right"> <br><br><br><br> <a href="#loginScreen" 
+            class="button">Log In</a> 
+            <a href="#registerScreen"
+            class="button">Register</a>
+          </div> 
   
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
@@ -48,7 +133,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <h3>Ciorbe tradiționale</h3>
     </div>
     <div class="w3-quarter">
-      <img src="sarmale.jpg" alt="Sarmale" style="width:100%">
+      <img src="poze/sarmale.jpg" alt="Sarmale" style="width:100%">
       <h3>Sarmale în foi de varză și vită</h3>
     </div>
     <div class="w3-quarter">
